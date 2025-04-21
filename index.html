@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/media.css" />
+    <script defer src="app.js"></script>
     <title>Tip calculator app</title>
   </head>
   <body>
@@ -45,14 +46,24 @@
             <div class="form__tip-container">
               <label for="tip">Select Tip %</label>
               <div class="form__tip-btns">
-                <button class="btn form__btn--tip" type="button">5%</button>
+                <button class="btn form__btn--tip" type="button" value="5">
+                  5%
+                </button>
 
-                <button class="btn form__btn--tip" type="button">10%</button>
+                <button class="btn form__btn--tip" type="button" value="10">
+                  10%
+                </button>
 
-                <button class="btn form__btn--tip" type="button">15%</button>
+                <button class="btn form__btn--tip" type="button" value="15">
+                  15%
+                </button>
 
-                <button class="btn form__btn--tip" type="button">25%</button>
-                <button class="btn form__btn--tip" type="button">50%</button>
+                <button class="btn form__btn--tip" type="button" value="25">
+                  25%
+                </button>
+                <button class="btn form__btn--tip" type="button" value="50">
+                  50%
+                </button>
 
                 <button
                   class="btn form__btn--tip form__btn--tip-custom"
@@ -92,14 +103,14 @@
                 <h2 class="result__title">Tip Amount</h2>
                 <p class="result__person">/ person</p>
               </div>
-              <p class="result__tip">$0.00</p>
+              <p class="result__tip result__tip--person">$0.00</p>
             </div>
             <div class="result__container">
               <div>
                 <h2 class="result__title">Total</h2>
                 <p class="result__person">/ person</p>
               </div>
-              <p class="result__tip">$0.00</p>
+              <p class="result__tip result__tip--total">$0.00</p>
             </div>
             <button class="btn result__btn--reset" type="reset">Reset</button>
           </section>
