@@ -1,0 +1,44 @@
+/* -----------EXTRA SMALL SCREENS------------------  */
+@media(width < 300px) {
+
+    input,
+    button {
+        max-width: 100%;
+    }
+
+    .form__tip-btns {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .result__container {
+        flex-direction: column;
+    }
+
+    .form__label-container {
+        flex-direction: column;
+    }
+}
+
+/* ---------- MEDIUM SCREENS ----------------  */
+@media (width > 600px) {
+
+    .card {
+        max-width: 800px;
+        width: 90%;
+    }
+
+    .form {
+        flex-direction: row;
+
+    }
+
+    .primary,
+    .result {
+        flex: 1
+    }
+
+    .result__btn--reset {
+        margin-top: auto;
+    }
+}

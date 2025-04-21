@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/media.css" />
+    <title>Tip calculator app</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- --------------- LOGO -----------------  -->
+      <header class="header">
+        <img src="./images/logo.svg" alt="Splitter logo" loading="lazy" />
+      </header>
+      <!-- -------------- HERO -----------------  -->
+      <main class="card">
+        <!-- --------------- FORM CARD -------------  -->
+        <form action="/bill.php" class="form" novalidate>
+          <!-- ------------------- BILL INPUT SECTION ----------------  -->
+          <section class="primary">
+            <div class="form__bill-container">
+              <label for="bill">Bill</label>
+              <div class="form__bill-wrapper">
+                <img src="./images/icon-dollar.svg" alt="dollar icon" />
+                <input type="number" placeholder="0" id="bill" name="bill" />
+              </div>
+            </div>
+            <!-- -------------------- TIP INPUT SECTION------------------->
+            <div class="form__tip-container">
+              <label for="tip">Select Tip %</label>
+              <div class="form__tip-btns">
+                <button class="btn form__btn--tip" type="button">5%</button>
+
+                <button class="btn form__btn--tip" type="button">10%</button>
+
+                <button class="btn form__btn--tip" type="button">15%</button>
+
+                <button class="btn form__btn--tip" type="button">25%</button>
+                <button class="btn form__btn--tip" type="button">50%</button>
+
+                <button
+                  class="btn form__btn--tip form__btn--tip-custom"
+                  type="button"
+                >
+                  Custom
+                </button>
+              </div>
+            </div>
+            <!-- ------------------ PEOPLE INPUT SECTION ------------------------  -->
+            <div class="form__people-container">
+              <div class="form__label-container">
+                <label for="people">Number of People</label>
+                <p class="form__error hidden">Can't be zero</p>
+              </div>
+              <div class="form__people-wrapper">
+                <img
+                  src="./images/icon-person.svg"
+                  alt="person icon"
+                  class="icon form__icon--person"
+                />
+                <input
+                  type="number"
+                  id="people"
+                  placeholder="0"
+                  class="form__people-input"
+                  name="people"
+                />
+              </div>
+            </div>
+          </section>
+
+          <!-- --------------------- RESULT CARD -----------------------------  -->
+          <section class="result">
+            <div class="result__container">
+              <div>
+                <h2 class="result__title">Tip Amount</h2>
+                <p class="result__person">/ person</p>
+              </div>
+              <p class="result__tip">$0.00</p>
+            </div>
+            <div class="result__container">
+              <div>
+                <h2 class="result__title">Total</h2>
+                <p class="result__person">/ person</p>
+              </div>
+              <p class="result__tip">$0.00</p>
+            </div>
+            <button class="btn result__btn--reset" type="reset">Reset</button>
+          </section>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
