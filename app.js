@@ -4,6 +4,7 @@ const peopleInput = document.querySelector("#people");
 const totalTipPerson = document.querySelector(".result__tip--person");
 const totalTipAmount = document.querySelector(".result__tip--total");
 const resetBtn = document.querySelector(".result__btn--reset");
+const form = document.querySelector(".form");
 
 allTipButtons.forEach((tipButton) => {
   tipButton.addEventListener("click", (evt) => {
@@ -20,7 +21,7 @@ allTipButtons.forEach((tipButton) => {
 
     // calculate total tip
     function showTotalTip() {
-      totalTipAmount.innerText = totalTip.toFixed(2);
+      totalTipAmount.innerText = `$${totalTip.toFixed(2)}`;
     }
     showTotalTip();
 
@@ -31,7 +32,13 @@ allTipButtons.forEach((tipButton) => {
         return totalTip / person;
       }
       const TipPerPerson = totalTipPerPerson(peopleInputValue);
-      totalTipPerson.innerText = TipPerPerson.toFixed(2);
+      totalTipPerson.innerText = `$${TipPerPerson.toFixed(2)}`;
     });
   });
+});
+
+resetBtn.addEventListener("click", () => {
+  form.reset();
+  totalTipPerson.innerText = "$0.00";
+  totalTipAmount.innerText = "$0.00";
 });

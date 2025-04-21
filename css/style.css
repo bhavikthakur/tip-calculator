@@ -38,7 +38,7 @@ button {
 }
 
 .form__btn--tip {
-    padding: 0.5em 2em;
+    padding: 0.5em 0em;
     background-color: var(--clr-grey-900);
     color: var(--clr-grey-50);
     border-radius: 0.2em;
@@ -55,12 +55,20 @@ button {
 
 .form__btn--tip-custom {
     background-color: var(--clr-grey-50);
-    color: var(--clr-grey-500);
+    color: var(--clr-grey-900);
+    padding: 0.5em 0em;
+    border-radius: 0.2em;
+    text-align: center;
+    width: 100%;
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+
 }
 
 .result__title {
-    color: var(--clr-white-100);
-    font-size: 0.85rem;
+    color: var(--clr-grey-50);
+    font-size: 1rem;
+
 }
 
 .result__person {
