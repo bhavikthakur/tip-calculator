@@ -65,6 +65,11 @@ button {
 
 }
 
+.form__btn--tip-custom:hover,
+.form__btn--tip-custom:focus {
+    background-color: var(--clr-grey-50);
+}
+
 .result__title {
     color: var(--clr-grey-50);
     font-size: 1rem;
@@ -103,6 +108,9 @@ button {
 .form__error {
     color: var(--clr-red-300);
     font-size: 0.85rem;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.2s visibility ease-in, 0.2s opacity ease-in;
 }
 
 /* --------------- LAYOUT --------------  */
@@ -178,7 +186,8 @@ button {
     align-items: center;
     width: 100%;
     border-radius: 0.2em;
-    transition: 0.2s outline, 0.2s cursor;
+    transition: 0.2s outline ease-in, 0.2s cursor ease-in;
+
 }
 
 .form__people-wrapper:hover,
@@ -209,8 +218,13 @@ button {
 
 }
 
-/* ------------ HIDDEN ERROR CLASS ------------- */
+/* ------------  ERROR CLASSES------------- */
 
 .hidden {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.outline__error {
+    outline: 1px solid var(--clr-red-300);
 }
