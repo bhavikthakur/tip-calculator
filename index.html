@@ -36,7 +36,12 @@
           <!-- ------------------- BILL INPUT SECTION ----------------  -->
           <section class="primary">
             <div class="form__bill-container">
-              <label for="bill">Bill</label>
+              <div class="form__label-container">
+                <label for="bill">Bill</label>
+                <p class="form__error form__error--bill hidden">
+                  Must be valid number
+                </p>
+              </div>
               <div class="form__bill-wrapper">
                 <img src="./images/icon-dollar.svg" alt="dollar icon" />
                 <input type="number" placeholder="0" id="bill" name="bill" />
@@ -65,10 +70,6 @@
                   50%
                 </button>
 
-                <!-- <button
-                  class="btn form__btn--tip form__btn--tip-custom"
-                  type="button"
-                > -->
                 <input
                   type="number"
                   placeholder="Custom"
@@ -76,15 +77,17 @@
                   name="custom"
                   value=""
                   class="form__btn--tip form__btn--tip-custom"
+                  max="100"
                 />
-                <!-- </button> -->
               </div>
             </div>
             <!-- ------------------ PEOPLE INPUT SECTION ------------------------  -->
             <div class="form__people-container">
               <div class="form__label-container">
                 <label for="people">Number of People</label>
-                <p class="form__error hidden">Can't be zero</p>
+                <p class="form__error form__error--person hidden">
+                  Can't be zero
+                </p>
               </div>
               <div class="form__people-wrapper">
                 <img

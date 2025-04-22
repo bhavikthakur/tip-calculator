@@ -42,7 +42,7 @@ button {
     background-color: var(--clr-grey-900);
     color: var(--clr-grey-50);
     border-radius: 0.2em;
-    transition: 0.2s background-color, 0.2s color;
+    transition: 0.2s background-color ease-in, 0.2s color ease-in;
 }
 
 .form__btn--tip:hover,
@@ -94,7 +94,7 @@ button {
     padding: 0.4em 0;
     font-size: 0.95rem;
     border-radius: 0.2em;
-    transition: 0.2s background-color;
+    transition: 0.2s background-color ease-in;
 
 }
 
@@ -158,7 +158,7 @@ button {
     align-items: center;
     width: 100%;
     border-radius: 0.2em;
-    transition: 0.2s outline, 0.2s cursor;
+    transition: 0.2s outline ease-in, 0.2s cursor ease-in;
 }
 
 .form__bill-wrapper:hover,
@@ -218,13 +218,20 @@ button {
 
 }
 
-/* ------------  ERROR CLASSES------------- */
+/* ------------  ACTIVE AND HIDDEN CLASSES------------- */
 
 .hidden {
     visibility: hidden;
     opacity: 0;
 }
 
+
+
 .outline__error {
     outline: 1px solid var(--clr-red-300);
+}
+
+.active__btn {
+    background-color: var(--clr-green-500);
+    color: var(--clr-grey-900);
 }
