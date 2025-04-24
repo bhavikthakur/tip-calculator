@@ -40,7 +40,7 @@ A sleek, responsive tip calculator built as part of the Frontend Mentor challeng
 ## 🔧 Setup & Usage  
 1. Clone this repository:  
    ```bash
-   git clone https://github.com/YOUR_GITHUB_USERNAME/social-links-profile.git    
+   git clone https://github.com/bhavikthakur/tip-calculator.git
 2. Open index.html in your browser. 
 
 ## 🔓 Lessons Learned  
