@@ -78,16 +78,26 @@ allTipButtons.forEach((tipButton) => {
 
 customInput.addEventListener("input", () => {
   // prevent users to type invalid characters and symnbols
-  customInput.value = customInput.value.replace(/[eE+-]/g, "");
+  customInput.value = customInput.value
+    .replace(/[^0-9.]/g, "") // only digits and one dot
+    .replace(/(\..*)\./g, "$1"); // block multiple dots
   isCustomTip = true;
   selectedTip = 0;
+  if (customInput.value > 100) {
+    customInput.style.color = "#ff726b";
+    customInput.value = 0;
+  } else {
+    customInput.style.color = "#00494d";
+  }
 
   allTipButtons.forEach((btn) => btn.classList.remove("active__btn"));
   showTotalTip();
 });
 
 billInput.addEventListener("input", () => {
-  billInput.value = billInput.value.replace(/[eE+-]/g, "");
+  billInput.value = billInput.value
+    .replace(/[^0-9.]/g, "") // only digits and one dot
+    .replace(/(\..*)\./g, "$1"); // block multiple dots
 
   if (billInput.value === "") {
     billContainer.classList.add("outline__error");

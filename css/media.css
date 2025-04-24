@@ -1,9 +1,17 @@
 /* -----------EXTRA SMALL SCREENS------------------  */
 @media(width < 300px) {
+    body {
+        font-size: 0.95rem;
+    }
+
+    h2 {
+        font-size: 0.9rem;
+    }
 
     input,
     button {
         max-width: 100%;
+        font-size: 0.95rem;
     }
 
     .form__tip-btns {
@@ -21,7 +29,7 @@
 }
 
 /* ---------- MEDIUM SCREENS ----------------  */
-@media (width > 600px) {
+@media (width > 670px) {
 
     .card {
         max-width: 800px;
@@ -36,7 +44,7 @@
 
     .form__tip-btns {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fre4yf;
+        grid-template-rows: 1fr 1fr;
     }
 
 
@@ -48,4 +56,61 @@
     .result__btn--reset {
         margin-top: auto;
     }
+}
+
+@media (width > 950px) {
+    .wrapper {
+        gap: 5.5rem;
+        margin-top: 8em;
+        margin-left: 5.3em;
+    }
+
+
+    .card {
+        max-width: 920px;
+        border-radius: 1.5em;
+        padding: 2em 3em;
+        gap: 3rem;
+    }
+
+
+    .primary {
+        padding-top: 1em;
+    }
+
+    .result {
+        border-radius: 1em;
+        padding: 2.5em;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    input {
+        font-size: 1.5rem;
+    }
+
+    .result__btn--reset {
+        font-size: 1.2rem;
+    }
+
+    .result__tip {
+        font-size: 3rem;
+    }
+
+
+    .form__tip-container {
+        margin-top: 1em;
+    }
+
+    .form__btn--tip {
+        font-size: 1.2rem;
+    }
+
+    .form__people-container {
+        margin-top: 2em;
+    }
+
+
 }
